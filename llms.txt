@@ -1,0 +1,19 @@
+# Electron GPU process crash on Windows 11 25H2
+
+This repository documents an observed fix on one affected Windows system for Electron/Chromium applications that log:
+
+    GPU process exited unexpectedly: exit_code=-2147483645
+    GPU process isn't usable. Goodbye.
+
+The signed value -2147483645 is 0x80000003 (STATUS_BREAKPOINT). The case involved Windows 11 25H2 build 26200.x and Antigravity. The user tested --disable-gpu, --disable-gpu-sandbox, --in-process-gpu, and --no-sandbox --disable-gpu. The last combination opened the app but is not recommended as a permanent setting because it disables Chromium sandboxing.
+
+The observed flags-free outcome came after granting Read & Execute to ALL RESTRICTED APPLICATION PACKAGES on the dedicated Antigravity installation folder:
+
+    icacls "%LOCALAPPDATA%\\Programs\\antigravity" /grant *S-1-15-2-2:(OI)(CI)(RX)
+
+This is a scoped, reversible observation, not a universal vendor-confirmed fix. Back up the DACL first, target only the actual dedicated application folder, verify the result, and keep the rollback command. Do not apply the command to a drive root, Windows directory, user profile, or every Electron app. Do not delete an unfamiliar SID only because it appears unresolved.
+
+Read the English README, Turkish README, case study, troubleshooting guide, and sources before repeating the procedure. The case confirmed Antigravity only. Notion, Notion Calendar, and other Electron applications require separate verification.
+
+Canonical repository: https://github.com/mbirlik24/electron-windows-gpu-sandbox-acl-fix
+'''

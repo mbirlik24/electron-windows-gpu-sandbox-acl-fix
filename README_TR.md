@@ -1,6 +1,8 @@
-# Windows 11 Electron GPU process hatası: gözlemlenen ACL çözümü
+# Windows 11 25H2 Electron GPU process hatası: `0x80000003` / `exit_code=-2147483645`
 
 [English](README.md) | [Vaka kaydı](docs/case-study.md) | [Sorun giderme](docs/troubleshooting.md) | [Kaynaklar](docs/sources.md)
+
+Aranan hata için hızlı bağlantılar: [SSS](docs/faq.md) | [yapay zekâlar için kısa özet](llms.txt)
 
 Windows 11 25H2 / 26200.x üzerinde Electron veya Chromium tabanlı bir uygulama `exit_code=-2147483645`, `0x80000003` ve `GPU process isn't usable. Goodbye.` hatasıyla kapanıyorsa bu repo benzer bir sistemde işe yarayan yöntemi belgeliyor. Antigravity, uygulama klasörüne sınırlı izin eklendikten sonra **hiçbir başlatma bayrağı olmadan açıldı**.
 

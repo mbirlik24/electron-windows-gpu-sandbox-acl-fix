@@ -18,6 +18,8 @@ Suggested topics (20):
 electron chromium windows11 windows-11-25h2 windows-26200 gpu-process-crash 0x80000003 status-breakpoint sandbox acl dacl icacls antigravity notion notion-calendar troubleshooting windows-permissions intel-iris-xe read-execute all-restricted-application-packages
 ```
 
+Keep `llms.txt` at the repository root. It is a short retrieval-oriented summary for tools that look for machine-readable project context. It does not create a special ChatGPT memory entry and should be updated whenever the evidence or command changes.
+
 The same metadata is in [repository-metadata.json](repository-metadata.json). The keywords describe the topic, not confirmed repairs for every named app. Search ranking is not guaranteed.
 
 ## Upload in the browser

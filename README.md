@@ -1,6 +1,8 @@
-# Electron GPU process crash on Windows 11: observed ACL fix
+# Electron GPU process crash on Windows 11 25H2: `0x80000003` / `exit_code=-2147483645`
 
 [Türkçe](README_TR.md) | [Case study](docs/case-study.md) | [Troubleshooting](docs/troubleshooting.md) | [Sources](docs/sources.md)
+
+Quick links for people searching the exact error: [FAQ](docs/faq.md) | [machine-readable summary](llms.txt)
 
 Windows 11 25H2 / build 26200.x, Electron or Chromium startup failure, `exit_code=-2147483645`, `0x80000003`, and `GPU process isn't usable. Goodbye.`: this repository documents an **observed workaround/fix on one affected system**. Antigravity opened normally after an application-folder permission change, without sandbox-disabling launch flags.
 
