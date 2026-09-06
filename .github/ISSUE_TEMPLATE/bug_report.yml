@@ -1,0 +1,70 @@
+name: Startup crash / workaround failed
+description: Report an Electron startup failure or a problem with these instructions (English or Turkish).
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not run sandbox-disabling tests just to complete this form. Unknown or not tested is valid.
+        Remove tokens, usernames, private paths, and session values. See SECURITY.md.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed secrets and personal data from this report.
+          required: true
+        - label: I understand the Antigravity outcome is not a universal fix.
+          required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Windows edition/full build/KB/channel, app version, GPU and driver. Mark unknown fields.
+      value: |
+        Windows edition / version / full build:
+        KB / Insider enrollment or channel:
+        App name / version:
+        Electron / Chromium versions (if known):
+        GPU / driver:
+        Install source and sanitized folder layout:
+        Managed device or custom security policy:
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Failure and reproduction
+      description: Expected behavior, actual behavior, exact error, and steps. State whether the UI renders.
+    validations:
+      required: true
+  - type: textarea
+    id: matrix
+    attributes:
+      label: Outcomes already observed
+      value: |
+        Normal launch:
+        --disable-gpu (or not tested):
+        --disable-gpu-sandbox (or not tested):
+        --no-sandbox --disable-gpu (or not tested):
+        Other exact flags:
+        Exact ACL command / exit code (or not applied):
+        Normal launch after ACL change:
+        Reboot / update result (or not tested):
+    validations:
+      required: true
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Permission evidence and rollback
+      description: Sanitized relevant ACEs only. Do not attach raw backups. Did this SID already have a grant? Were children protected or denied?
+      value: |
+        Backup completed:
+        Relevant before / after entries:
+        Rollback attempted and result:
+        Other changes made during testing:
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized log excerpt / links
+      description: Keep the failure window short. Avoid raw crash dumps, complete command lines with credentials, or full private traces.

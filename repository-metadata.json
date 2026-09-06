@@ -1,0 +1,32 @@
+{
+  "name": "electron-windows-gpu-sandbox-acl-fix",
+  "description": "Observed ACL fix for Electron/Chromium GPU process crashes on Windows 11 25H2 (26200.x): 0x80000003 / -2147483645. Antigravity case, safe steps, rollback, EN/TR docs.",
+  "topics": [
+    "electron",
+    "chromium",
+    "windows11",
+    "windows-11-25h2",
+    "windows-26200",
+    "gpu-process-crash",
+    "0x80000003",
+    "status-breakpoint",
+    "sandbox",
+    "acl",
+    "dacl",
+    "icacls",
+    "antigravity",
+    "notion",
+    "notion-calendar",
+    "troubleshooting",
+    "windows-permissions",
+    "intel-iris-xe",
+    "read-execute",
+    "all-restricted-application-packages"
+  ],
+  "license": "MIT",
+  "languages": [
+    "en",
+    "tr"
+  ],
+  "evidence_reviewed": "2026-09-06"
+}

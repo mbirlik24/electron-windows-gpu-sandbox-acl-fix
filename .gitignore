@@ -1,0 +1,15 @@
+# Private diagnostics and local artifacts
+*.log
+*.dmp
+*.pml
+*.etl
+*.dacl
+*.acl
+*.zip
+.env
+.env.*
+backups/
+private/
+work/
+Thumbs.db
+.DS_Store
